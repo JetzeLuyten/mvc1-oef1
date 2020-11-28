@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Coronacrisis: Activiteiten met kinderen</title>
+</head>
+<body>
+    <h2>Welke activiteiten doen we met de kinderen:</h2>
+    <p th:text = "'Op ' + ${activiteit.getDag()} + ':' + ${activiteit.getOmschrijving()}"></p>
+    <p><a href="/">Terug naar beginpagina</a></p>
+</body>
+</html>
