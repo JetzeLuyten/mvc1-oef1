@@ -27,7 +27,7 @@ stages:
   - job: MavenPackageAndPublishArtifacts
     displayName: Maven Package and Publish Artifacts
     pool:
-      vmImage: $(vmImageName)
+      vmImage: 'ubuntu-16.04' # other options: 'macOS-10.14', 'vs2017-win2016'
     
     steps:
     - task: Maven@3
@@ -54,7 +54,7 @@ stages:
     displayName: Deploy Linux Web App
     environment: $(environmentName)
     pool: 
-      vmImage: $(vmImageName)
+       vmImage: 'ubuntu-16.04' # other options: 'macOS-10.14', 'vs2017-win2016'
     strategy:
       runOnce:
         deploy:
